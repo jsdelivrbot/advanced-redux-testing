@@ -1,15 +1,14 @@
 import { renderComponent, expect } from '../test_helper'
 import App from '../../src/components/app'
 
-// use describe to group together similar tests
 describe('app', () => {
-    // use 'it' to test a single attribute of a target
-    it('shows the correct text', () => {
+    let component
 
-        // create an instance of app
-        const component = renderComponent(App)
+    beforeEach(() => {
+        component = renderComponent(App)
+    })
 
-        // use 'expect' to make an assertion about a target
-        expect(component).to.contain('React simple starter')
+    it('CommentBox is rendered', () => {
+        expect(component.find('.comment-box')).to.exist
     })
 })
