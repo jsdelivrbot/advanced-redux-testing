@@ -11,4 +11,8 @@ describe('app', () => {
     it('CommentBox is rendered', () => {
         expect(component.find('.comment-box')).to.exist
     })
+
+    it('CommentList is rendered', () => {
+        expect(component.find('.comment-list')).to.exist
+    })
 })
