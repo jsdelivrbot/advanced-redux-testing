@@ -28,8 +28,10 @@ describe('CommentBox', () => {
             expect(component.find('textarea')).to.have.value('new comment')
         })
 
-        // it('clears input when submitted', () => {
-        //
-        // })
+        it('clears input when submitted', () => {
+            component.simulate('submit')
+            
+            expect(component.find('textarea')).to.have.value('')
+        })
     })
 })
